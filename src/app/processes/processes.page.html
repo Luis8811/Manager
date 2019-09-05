@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+    <ion-title>{{'perspective_of_processes' | translate}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div>
+        <h3>{{'weekly_summary_of_orders' | translate}}</h3>
+      </div>
+      <div #weeklySummaryOfOrdersChartContainer class='chart-container'>
+        <canvas  #weeklySummaryOfOrdersChartCanvas id="weeklySummaryOfOrdersChart"></canvas>
+    </div>
+    <div>
+        <h3>{{'monthly_summary_of_orders' | translate}}</h3>
+      </div>
+      <div #monthlySummaryOfOrdersChartContainer class='chart-container'>
+        <canvas  #monthlySummaryOfOrdersChartCanvas id="monthlySummaryOfOrdersChart"></canvas>
+    </div>
+    <div>
+        <h3>{{'summary_of_sales' | translate}}</h3>
+    </div>
+    <div>
+        <ion-list>
+            <ion-item *ngFor="let item of salesSummary">
+            {{item.nameOfProduct}}
+            <div class="item-note" slot="end">
+              <ion-badge color="primary">{{item.dailySales}}</ion-badge>
+          </div>
+            <div class="item-note" slot="end">
+                <ion-badge color="primary">{{item.weeklySales}}</ion-badge>
+            </div>
+            <div class="item-note" slot="end">
+                <ion-badge color="primary">{{item.monthlySales}}</ion-badge>
+            </div>
+          </ion-item>
+        </ion-list>
+    </div>
+</ion-content>

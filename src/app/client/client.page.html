@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+  </ion-buttons>
+<ion-title>Perspective of client</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div>
+        <h3>Sex of clients</h3>
+      </div>
+      <div #sexOfClientsChartContainer class='chart-container'>
+        <canvas  #sexOfClientsChartCanvas id="sexOfClientsChart"></canvas>
+    </div>
+    <div>
+        <h3>Range of age of clients</h3>
+      </div>
+      <div #rangeOfAgeOfClientsChartContainer class='chart-container'>
+        <canvas  #rangeOfAgeOfClientsChartCanvas id="rangeOfAgeOfClientsChart"></canvas>
+    </div>
+</ion-content>

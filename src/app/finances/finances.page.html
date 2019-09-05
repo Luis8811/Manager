@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+    <ion-title> {{'perspective_of_finances' | translate}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content padding>
+<div>
+  <h3>{{'weekly_summary' | translate}}</h3>
+</div>
+<div #chartLineContainer class='chart-container'>
+  <canvas  #chartLineCanvas id="lineChart"></canvas>
+</div>
+<div>
+  <h3>{{'monthly_summary' | translate}}</h3>
+</div>
+<div #barChartContainer class='chart-container'>
+  <canvas  #barChartCanvas id="barChart"></canvas>
+</div>
+</ion-content>
+
+
